@@ -1,0 +1,26 @@
+{
+  "name": "blogr-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "description": "This is a solution to the Blogr landing page challenge on Frontend Mentor",
+  "author": "Csaba Molnar (DocForLoop)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "sass": "^1.86.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
+}
