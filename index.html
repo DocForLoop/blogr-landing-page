@@ -22,40 +22,101 @@
     <meta name="twitter:title" content="Blogr landing page | Frontend Mentor Challenge">
     <meta name="twitter:description" content="Blogr landing page challenge solution using HTML, Sass & Vite.">
     <!-- <meta name="twitter:image" content="preview.jpg"> -->
-
+     
     <script type="module" src="src/main.ts"></script>
   </head>
   <body>
-    Product
+    <div>
+      <header>
+        <a class="header__skip-link" href="#main-content">Skip to main content</a>
 
-    Overview
-    Pricing
-    Marketplace
-    Features
-    Integrations
+        <div>
+          <a href="#">
+            <img src="/src/assets/images/logo.svg" alt="Home of Blogr" width="82" height="32">
+          </a>
 
-    Company
+          <nav>
+            <ul>
+              <li>
+                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-product">
+                  Product
+                  <svg aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
+                    <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
+                  </svg>
+                </button>
+                <ul id="dropdown-product" role="menu" aria-hidden="true">
+                  <li role="none"><a href="#" role="menuitem">Overview</a></li>
+                  <li role="none"><a href="#" role="menuitem">Pricing</a></li>
+                  <li role="none"><a href="#" role="menuitem">Marketplace</a></li>
+                  <li role="none"><a href="#" role="menuitem">Features</a></li>
+                  <li role="none"><a href="#" role="menuitem">Integrations</a></li>
+                </ul>
+              </li>
 
-    About
-    Team
-    Blog
-    Careers
+              <li>
+                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-company">
+                  Company
+                  <svg aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
+                    <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
+                  </svg>
+                </button>
+                <ul id="dropdown-company" role="menu" aria-hidden="true">
+                  <li role="none"><a href="#" role="menuitem">About</a></li>
+                  <li role="none"><a href="#" role="menuitem">Team</a></li>
+                  <li role="none"><a href="#" role="menuitem">Blog</a></li>
+                  <li role="none"><a href="#" role="menuitem">Careers</a></li>
+                </ul>
+              </li>
 
-    Connect
+              <li>
+                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-connect">
+                  Connect
+                  <svg aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
+                    <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
+                  </svg>
+                </button>
+                <ul id="dropdown-connect" role="menu" aria-hidden="true">
+                  <li role="none"><a href="#" role="menuitem">Contact</a></li>
+                  <li role="none"><a href="#" role="menuitem">Newsletter</a></li>
+                  <li role="none"><a href="#" role="menuitem">LinkedIn</a></li>
+                </ul>
+              </li>
 
-    Contact
-    Newsletter
-    LinkedIn
+              <li>
+                <a href="#">Login</a>
+              </li>
+              <li>
+                <a href="#">Sign Up</a>
+              </li>
+            </ul>
+          </nav>
 
-    Login
-    Sign Up
+          <button aria-label="Open menu">
+            <img src="/src/assets/images/icon-hamburger.svg" alt="" width="32" height="18">
+          </button>
+        </div>
 
-    A modern publishing platform
-    Grow your audience and build your online brand
+        <section aria-labelledby="header-title">
+          <div>
+            <h1 id="header-title">A modern publishing platform</h1>
+            <p>Grow your audience and build your online brand</p>
+          </div>
 
-    Start for Free
-    Learn More
+          <div>
+            <a href="#">Start for Free</a>
+            <a href="#">Learn More</a>
+          </div>
+        </section>
+      </header>
 
+      <main id="main-content" tabindex="-1">
+
+      </main>
+
+      <footer>
+
+      </footer>
+    </div>
     Designed for the future
 
     Introducing an extensible editor
@@ -102,9 +163,5 @@
     Newsletter
     LinkedIn
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 </html>
