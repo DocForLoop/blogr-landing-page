@@ -44,6 +44,7 @@
                     <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
                   </svg>
                 </button>
+
                 <ul id="dropdown-product" role="menu" aria-hidden="true">
                   <li role="none"><a href="#" role="menuitem">Overview</a></li>
                   <li role="none"><a href="#" role="menuitem">Pricing</a></li>
@@ -60,6 +61,7 @@
                     <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
                   </svg>
                 </button>
+
                 <ul id="dropdown-company" role="menu" aria-hidden="true">
                   <li role="none"><a href="#" role="menuitem">About</a></li>
                   <li role="none"><a href="#" role="menuitem">Team</a></li>
@@ -75,6 +77,7 @@
                     <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
                   </svg>
                 </button>
+                
                 <ul id="dropdown-connect" role="menu" aria-hidden="true">
                   <li role="none"><a href="#" role="menuitem">Contact</a></li>
                   <li role="none"><a href="#" role="menuitem">Newsletter</a></li>
@@ -91,8 +94,9 @@
             </ul>
           </nav>
 
-          <button aria-label="Open menu">
-            <img src="/src/assets/images/icon-hamburger.svg" alt="" width="32" height="18">
+          <button aria-label="Open menu" aria-expanded="false">
+            <img src="/src/assets/images/icon-hamburger.svg" 
+                  alt="" width="32" height="18">
           </button>
         </div>
 
@@ -110,58 +114,114 @@
       </header>
 
       <main id="main-content" tabindex="-1">
+        <section>
+          <h2>Designed for the future</h2>
 
+          <div>
+            <picture>
+              <source media="(width > 75em)" srcset="/src/assets/images/illustration-editor-desktop.svg">
+              <img src="/src/assets/images/illustration-editor-mobile.svg" 
+                    alt="" width="376" height="307" loading="lazy" decoding="async">
+            </picture>
+
+            <div>
+              <section>
+                <h3>Introducing an extensible editor</h3>
+                <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+                  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+                  change the looks of a blog.
+                </p>
+              </section>
+
+              <section>
+                <h3>Robust content management</h3>
+                <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+                  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                </p>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="state">
+          <img src="/src/assets/images/illustration-phones.svg" 
+                alt="" width="328" height="347" loading="lazy" decoding="async">
+
+          <div>
+            <h2 id="state">State of the Art Infrastructure</h2>
+            <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+              This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <picture>
+            <source media="(width > 75em)" srcset="/src/assets/images/illustration-laptop-desktop.svg">
+            <img src="/src/assets/images/illustration-laptop-mobile.svg" 
+                  alt="" width="347" height="250" loading="lazy" decoding="async">
+          </picture>
+
+          <div>
+            <h3>Free, open, simple</h3>
+            <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+          </div>
+
+          <div>
+            <h3>Powerful tooling</h3>
+            <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+              capable of producing even the most complicated sites.
+            </p>
+          </div>
+        </section>
       </main>
 
       <footer>
+        <div>
+          <a href="#"><img src="/src/assets/images/logo.svg" 
+                alt="Home of Blogr" width="100" height="40" loading="lazy" decoding="async">
+          </a>
+          
+          <nav aria-label="Footer">
+            <section aria-labelledby="footer-product-title">
+              <h4 id="footer-product-title">Product</h4>
 
+              <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="footer-company-title">
+              <h4 id="footer-company-title">Company</h4>
+
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </section>
+
+            <section aria-labelledby="footer-connect-title">
+              <h4 id="footer-connect-title">Connect</h4>
+              
+              <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </section>
+          </nav>
+        </div>
       </footer>
     </div>
-    Designed for the future
-
-    Introducing an extensible editor
-    Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-    The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-    videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-    change the looks of a blog.
-
-    Robust content management
-    Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-    by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-    State of the Art Infrastructure
-    With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-    This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-    Free, open, simple
-    Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-    features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-    and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-    Powerful tooling
-    Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-    capable of producing even the most complicated sites.
-
-    Product
-
-    Overview
-    Pricing
-    Marketplace
-    Features
-    Integrations
-
-    Company
-
-    About
-    Team
-    Blog
-    Careers
-
-    Connect
-
-    Contact
-    Newsletter
-    LinkedIn
-
   </body>
 </html>
