@@ -1,1 +1,19 @@
 @use './functions' as *;
+
+@mixin btn-light {
+    padding-block: 15px;
+    background-color: var(--clr-light);
+    color: var(--clr-cta);
+}
+
+@mixin btn-dark {
+    padding-block: 15px;
+    color: var(--clr-light);
+    border: rem(1) solid var(--clr-light);
+}
+
+@mixin btn-grad {
+    padding-block: 15px;
+    color: var(--clr-light);
+    background: var(--clr-header-grad-desktop);
+}

@@ -1,1 +1,62 @@
 @use './functions' as *;
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../assets/fonts/overpass-v16-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../assets/fonts/overpass-v16-latin-600.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/ubuntu-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../assets/fonts/ubuntu-v20-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../assets/fonts/ubuntu-v20-latin-700.woff2') format('woff2');
+}
+  
+:root {
+    --ff-primary: 'Overpass', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --ff-secondary: 'Ubuntu', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --fs-h1: #{fluid(36, 64, 375, 1440, rem)};
+    --fs-h1-desc: #{fluid(18, 20, 375, 1440, rem)};
+    --fs-h2-primary: #{fluid(28, 40, 375, 1440, rem)};
+    --fs-h2-secondary: #{rem(40)};
+    --fs-h3: #{rem(28)};
+    --fs-h4: #{rem(15)};
+    --fs-links: #{rem(15)};
+    --fs-body-primary: #{rem(16)};
+    --fs-body-secondary: #{rem(18)};
+    --fw-1: 300;
+    --fw-2: 400;
+    --fw-3: 500;
+    --fw-4: 600;
+    --fw-5: 700;
+}
