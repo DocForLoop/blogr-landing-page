@@ -1,3 +1,5 @@
+@use './functions' as *;
+
 html {
     font-size: 100%;
 }
@@ -41,7 +43,6 @@ h3 {
 
 p, li, figcaption {
     text-wrap: pretty;
-    max-inline-size: 65ch;
 }
 
 img, picture, video, canvas, svg {
@@ -63,6 +64,15 @@ h1, h2, h3, h4, h5, h6 {
 
 a, a:visited, a:active {
     text-decoration: none;
+}
+
+a {
+    border-radius: rem(5);
+
+    &:focus-visible {
+        outline: rem(3) solid var(--clr-body);
+        outline-offset: rem(3);
+    }
 }
 
 ul {

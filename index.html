@@ -25,90 +25,92 @@
      
     <script type="module" src="src/main.ts"></script>
   </head>
-  <body>
-    <div>
-      <header>
+  <body class="body">
+    <div class="page-wrapper">
+      <header class="header">
         <a class="header__skip-link" href="#main-content">Skip to main content</a>
 
-        <div>
-          <a href="#">
-            <img src="/src/assets/images/logo.svg" alt="Home of Blogr" width="82" height="32">
+        <div class="header__wrapper">
+          <a class="header__logo-link" href="#">
+            <img class="header__logo" src="/src/assets/images/logo.svg" 
+                  alt="Home of Blogr" width="82" height="32">
           </a>
 
-          <nav>
-            <ul>
-              <li>
-                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-product">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item header__nav-item--dropdown">
+                <button class="header__dropdown-toggle" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-product">
                   Product
-                  <svg aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
+                  <svg class="header__dropdown-icon" aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
                     <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
                   </svg>
                 </button>
 
-                <ul id="dropdown-product" role="menu" aria-hidden="true">
-                  <li role="none"><a href="#" role="menuitem">Overview</a></li>
-                  <li role="none"><a href="#" role="menuitem">Pricing</a></li>
-                  <li role="none"><a href="#" role="menuitem">Marketplace</a></li>
-                  <li role="none"><a href="#" role="menuitem">Features</a></li>
-                  <li role="none"><a href="#" role="menuitem">Integrations</a></li>
+                <ul class="header__dropdown-menu" id="dropdown-product" role="menu" aria-hidden="true">
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Overview</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Pricing</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Marketplace</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Features</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Integrations</a></li>
                 </ul>
               </li>
 
-              <li>
-                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-company">
+              <li class="header__nav-item header__nav-item--dropdown">
+                <button class="header__dropdown-toggle" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-company">
                   Company
-                  <svg aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
+                  <svg class="header__dropdown-icon" aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
                     <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
                   </svg>
                 </button>
 
-                <ul id="dropdown-company" role="menu" aria-hidden="true">
-                  <li role="none"><a href="#" role="menuitem">About</a></li>
-                  <li role="none"><a href="#" role="menuitem">Team</a></li>
-                  <li role="none"><a href="#" role="menuitem">Blog</a></li>
-                  <li role="none"><a href="#" role="menuitem">Careers</a></li>
+                <ul class="header__dropdown-menu" id="dropdown-company" role="menu" aria-hidden="true">
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">About</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Team</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Blog</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Careers</a></li>
                 </ul>
               </li>
 
-              <li>
-                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-connect">
+              <li class="header__nav-item header__nav-item--dropdown">
+                <button class="header__dropdown-toggle" aria-haspopup="menu" aria-expanded="false" aria-controls="dropdown-connect">
                   Connect
-                  <svg aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
+                  <svg class="header__dropdown-icon" aria-hidden="true" width="10" height="7" viewBox="0 0 10 7">
                     <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4"/>
                   </svg>
                 </button>
                 
-                <ul id="dropdown-connect" role="menu" aria-hidden="true">
-                  <li role="none"><a href="#" role="menuitem">Contact</a></li>
-                  <li role="none"><a href="#" role="menuitem">Newsletter</a></li>
-                  <li role="none"><a href="#" role="menuitem">LinkedIn</a></li>
+                <ul class="header__dropdown-menu" id="dropdown-connect" role="menu" aria-hidden="true">
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Contact</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">Newsletter</a></li>
+                  <li role="none"><a class="header__dropdown-link" href="#" role="menuitem">LinkedIn</a></li>
                 </ul>
               </li>
 
-              <li>
-                <a href="#">Login</a>
+              <li class="header__nav-item header__nav-item--login">
+                <a class="header__nav-link header__nav-link--login" href="#">Login</a>
               </li>
-              <li>
-                <a href="#">Sign Up</a>
+
+              <li class="header__nav-item header__nav-item--cta">
+                <a class="header__nav-link header__nav-link--cta" href="#">Sign Up</a>
               </li>
             </ul>
           </nav>
 
-          <button aria-label="Open menu" aria-expanded="false">
-            <img src="/src/assets/images/icon-hamburger.svg" 
+          <button class="header__menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <img class="header__menu-icon" src="/src/assets/images/icon-hamburger.svg" 
                   alt="" width="32" height="18">
           </button>
         </div>
 
-        <section aria-labelledby="header-title">
-          <div>
-            <h1 id="header-title">A modern publishing platform</h1>
-            <p>Grow your audience and build your online brand</p>
+        <section class="hero" aria-labelledby="header-title">
+          <div class="hero__content">
+            <h1 class="hero__title" id="header-title">A modern publishing platform</h1>
+            <p class="hero__desc">Grow your audience and build your online brand</p>
           </div>
 
-          <div>
-            <a href="#">Start for Free</a>
-            <a href="#">Learn More</a>
+          <div class="hero__actions">
+            <a class="hero__btn hero__btn--light" href="#">Start for Free</a>
+            <a class="hero__btn hero__btn--dark" href="#">Learn More</a>
           </div>
         </section>
       </header>

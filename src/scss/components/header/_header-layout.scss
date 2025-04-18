@@ -1,1 +1,81 @@
 @use '@scss/global/functions' as *;
+
+.body {
+    display: grid;
+    place-items: center;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(108, 119, 375, 1440);
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        /* display: none; */
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    &__nav-item--dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__dropdown-toggle {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+    &__dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 12px;
+    }
+
+    &__nav-item--login {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__nav-item--cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 48px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__actions {
+        display: flex;
+        column-gap: 16px;
+    }
+}

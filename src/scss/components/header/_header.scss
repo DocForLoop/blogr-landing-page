@@ -1,2 +1,193 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+.body {
+    min-block-size: 100vh;
+}
+
+.page-wrapper {
+    inline-size: 100%;
+    max-inline-size: rem(1650);
+}
+
+.header {
+    background-image: url('/src/assets/images/bg-pattern-intro-mobile.svg'),
+                        var(--clr-header-grad-mobile);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -340px -235px, top;
+    padding-inline: fluid(24, 164, 375, 1440);
+    padding-block-start: fluid(56, 60, 375, 1440);
+    padding-block-end: 155px;
+    border-end-start-radius: 100px;
+
+    &__skip-link {
+        position: absolute;
+        inset-inline-start: rem(-100);
+        inset-block-start: 0;
+        inline-size: rem(1);
+        block-size: rem(1);
+        overflow: clip;
+
+        &:focus-visible {
+            position: absolute;
+            inset-inline-start: 0;
+            inline-size: fit-content;
+            block-size: fit-content;
+            padding: 1rem;
+            background: var(--clr-section-grad);
+            color: var(--clr-light);
+            z-index: 100;
+            border-radius: 0;
+            border-end-end-radius: rem(12);
+            text-decoration: underline;
+            font-weight: var(--fw-5);
+            outline: rem(3) solid var(--clr-light);
+            outline-offset: 0;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+    
+    &__logo {
+        inline-size: fluid(82, 100.62, 375, 1440, rem);
+        block-size: fluid(32, 39.4, 375, 1440, rem);
+
+    }
+
+    &__menu-toggle {
+        margin-left: auto;
+        border: none;
+        background: none;
+        border-radius: rem(5);
+        
+        &:focus-visible {
+            outline: rem(3) solid var(--clr-body);
+            outline-offset: rem(5);
+        }
+    }
+
+    &__menu-icon {
+        inline-size: rem(32);
+        block-size: rem(18);
+    }
+
+    &__nav {
+        position: absolute;
+        inset-block-start: 69px;
+        inset-inline: 0;
+        border-radius: rem(5);
+        background-color: var(--clr-light);
+        padding-inline: 24px;
+        padding-block-start: 24px;
+        padding-block-end: 32px;
+        box-shadow: 0 rem(20) rem(40) 0 var(--clr-dropdown-shadow);
+        font-weight: var(--fw-4);
+    }
+    
+    &__dropdown-toggle {
+        align-self: center;
+        border: none;
+        border-radius: rem(5);
+        background: transparent;
+        cursor: pointer;
+        font-size: var(--fs-body-secondary);
+        color: var(--clr-headings);
+        
+        &:focus-visible {
+            outline: rem(3) solid var(--clr-body);
+        }
+    }
+// Helper class for dropdown-btn
+    &__dropdown-toggle--active{
+        opacity: 0.75;
+    }
+    
+    &__dropdown-icon {
+        inline-size: rem(10);
+        block-size: rem(7);
+    }
+
+// Helper class for dropdown-icon
+    &__dropdown-icon--active {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+    
+    &__dropdown-menu{
+        max-height: 0;
+        opacity: 0;
+        padding-block: 0;
+        overflow: clip;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: 
+            max-height 0.3s, 
+            opacity 0.3s,
+            padding-block 0.3s,
+            transform 0.3s;
+        background-color: var(--clr-dropdown-bg);
+        border-radius: rem(5);
+    }
+
+// Helper class for dropdown-menu
+    &__dropdown-menu--active {
+        max-height: 300px;
+        opacity: 1;
+        padding-block: 20px;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+        row-gap: 24px;
+    }
+    
+    &__dropdown-link {
+        color: var(--clr-headings);
+        opacity: 0.75;
+    }
+    
+    &__nav-item--login {
+        padding-block-start: 24px;
+        border-block-start: rem(1) solid var(--clr-decor-line);
+    }
+    
+    &__nav-link--login {
+        font-size: var(--fs-body-secondary);
+        color: var(--clr-headings);
+    }
+    
+    &__nav-link--cta {
+        @include m.btn-grad;
+        padding-inline: 40px;
+    }
+}
+
+.hero {
+    text-align: center;
+    color: var(--clr-light);
+
+    &__title {
+        letter-spacing: rem(-1);
+    }
+
+    &__desc {
+        font-size: var(--fs-h1-desc);
+    }
+
+    &__actions {
+        line-height: normal;
+    }
+    &__btn--light {
+        flex-shrink: 0;
+        @include m.btn-light;
+        padding-inline: 16px;
+    }
+
+    &__btn--dark {
+        flex-shrink: 0;
+        @include m.btn-dark;
+        padding-inline: 24px;
+    }
+}

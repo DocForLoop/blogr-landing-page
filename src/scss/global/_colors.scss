@@ -1,14 +1,17 @@
 :root {
     --clr-cta: hsl(356, 100%, 66%);
     --clr-headings: hsl(208, 49%, 24%);
+    --clr-cta-text: hsl(0, 0%, 0%);
+    --clr-btn-sign-up: hsl(353, 100%, 46%);
     --clr-cta-hover: hsl(355, 100%, 74%);
     --clr-light: hsl(0, 0%, 100%);
     --clr-body: hsl(207, 13%, 34%);
     --clr-footer: hsl(240, 2%, 79%);
     --clr-footer-bg: hsl(240, 10%, 16%);
-    --clr-dropdown-bg: hsl(0, 0%, 59%);
-    --clr-header-grad-desktop: linear-gradient(-67deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
-    --clr-header-grad-mobile: linear-gradient(-32deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
-    --clr-section-grad: linear-gradient(-74deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
+    --clr-dropdown-bg: hsla(237, 17%, 21%, 0.08);
+    --clr-decor-line: hsl(0, 7%, 90%);
     --clr-dropdown-shadow: hsla(0, 0%, 0%, 0.2434);
+    --clr-header-grad-desktop: linear-gradient(-67deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
+    --clr-header-grad-mobile: linear-gradient(-53deg, hsl(353, 100%, 62%) 0%, hsl(13, 100%, 72%) 100%);
+    --clr-section-grad: linear-gradient(-74deg, hsl(237, 17%, 21%) 0%, hsl(237, 23%, 32%) 100%);
 }
