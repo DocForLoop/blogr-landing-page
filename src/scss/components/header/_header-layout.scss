@@ -18,13 +18,11 @@
     &__wrapper {
         display: flex;
         align-items: center;
-
     }
 
     &__nav {
         display: flex;
-        flex-direction: column;
-        /* display: none; */
+        flex-direction: column;  
     }
 
     &__nav-list {

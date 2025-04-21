@@ -61,6 +61,7 @@
         border: none;
         background: none;
         border-radius: rem(5);
+        cursor: pointer;
         
         &:focus-visible {
             outline: rem(3) solid var(--clr-body);
@@ -71,6 +72,12 @@
     &__menu-icon {
         inline-size: rem(32);
         block-size: rem(18);
+    }
+    
+// Helper class for menu-icon
+    &__menu-icon--active {
+        inline-size: rem(26);
+        block-size: rem(26);
     }
 
     &__nav {
@@ -84,6 +91,20 @@
         padding-block-end: 32px;
         box-shadow: 0 rem(20) rem(40) 0 var(--clr-dropdown-shadow);
         font-weight: var(--fw-4);
+        opacity: 0;
+
+        transform: translateY(-16px);
+        pointer-events: none;
+        visibility: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+// Helper class for nav
+    &__nav--active {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
     }
     
     &__dropdown-toggle {
@@ -94,25 +115,27 @@
         cursor: pointer;
         font-size: var(--fs-body-secondary);
         color: var(--clr-headings);
+        transition: color 0.3s ease;
         
         &:focus-visible {
             outline: rem(3) solid var(--clr-body);
         }
     }
+
 // Helper class for dropdown-btn
     &__dropdown-toggle--active{
-        opacity: 0.75;
+        color: var(--clr-headings-active);
     }
     
     &__dropdown-icon {
         inline-size: rem(10);
         block-size: rem(7);
+        transition: transform 0.3s ease;
     }
 
 // Helper class for dropdown-icon
     &__dropdown-icon--active {
         transform: rotate(180deg);
-        transition: transform 0.3s ease;
     }
     
     &__dropdown-menu{
@@ -144,8 +167,12 @@
     }
     
     &__dropdown-link {
-        color: var(--clr-headings);
-        opacity: 0.75;
+        color: var(--clr-headings-active);
+        transition: color 0.3s;
+        
+        &:hover, &:focus-visible {
+            color: var(--clr-headings);
+        }
     }
     
     &__nav-item--login {
@@ -157,10 +184,11 @@
         font-size: var(--fs-body-secondary);
         color: var(--clr-headings);
     }
-    
+
     &__nav-link--cta {
         @include m.btn-grad;
         padding-inline: 40px;
+        white-space: nowrap;
     }
 }
 
