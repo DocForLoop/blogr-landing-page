@@ -1,1 +1,74 @@
 @use '@scss/global/functions' as *;
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.future {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 46px;
+    }
+
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(40, 64, 375, 1440);
+    }
+
+    &__feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+    }
+}
+
+.infrastructure {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(47, 114, 375, 1200);
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+    
+    &__img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+    }
+}

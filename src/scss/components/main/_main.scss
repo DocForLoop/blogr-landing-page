@@ -1,2 +1,100 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+.future {
+    text-align: center;
+
+    &__title {
+        font-size: var(--fs-h2-primary);
+        letter-spacing: var(--ls-h2-mob);
+    }
+
+    &__img {
+        inline-size: 100%;
+        block-size: auto;
+        max-inline-size: rem(650);
+    }
+
+    &__text {
+        padding-inline: 24px;
+    }
+
+    &__feature-title {
+        font-size: var(--fs-h3);
+    }
+
+    &__feature-desc {
+        letter-spacing: var(--ls-body);
+        max-inline-size: 47ch;
+    }
+
+    &__feature-desc--shorter {
+        max-inline-size: 45ch;
+    }
+}
+
+.infrastructure {
+    margin-block-start: 273px;
+    background-image: url('/src/assets/images/bg-pattern-circles.svg'),
+                 var(--clr-section-grad);
+    background-repeat: no-repeat, no-repeat;
+    background-position: fluid(-100, 150, 375, 1200) -250px, center;
+    background-size: fluid(602, 950, 375, 1200) fluid(602, 950, 375, 1200), cover;
+    border-end-start-radius: rem(100);
+    border-start-end-radius: rem(100);
+    padding-block-start: 125px;
+    padding-block-end: 109px;
+    
+    
+    &__img-container {
+        position: relative;
+        max-inline-size: rem(450);
+        aspect-ratio: 8/1;
+        margin-inline-start: fluid(0, 380, 423, 1200);
+    }
+
+    &__img {
+        position: absolute;
+        inset-block-start: -310px;
+        inset-inline: 0;
+        inline-size: 100%;
+        block-size: auto;
+    }
+    
+    &__content {
+        padding-inline: 24px;
+        color: var(--clr-light);
+        text-align: center;
+    }
+
+    &__title {
+        color: var(--clr-light);
+        font-size: var(--fs-h2-secondary);
+        letter-spacing: var(--ls-h2-desk);
+    }
+
+    &__desc {
+        max-inline-size: 51ch;
+    }
+}
+
+.tools {
+    text-align: center;
+    margin-block-start: 79px;
+    
+    &__img {
+        inline-size: 100%;
+        block-size: auto;
+        max-inline-size: rem(650);
+    }
+
+    &__title {
+        font-size: var(--fs-h3);
+    }
+
+    &__desc {
+        letter-spacing: var(--ls-body);
+        padding-inline: 30px;
+        max-inline-size: 52ch;
+    }
+}

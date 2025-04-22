@@ -115,30 +115,30 @@
         </section>
       </header>
 
-      <main id="main-content" tabindex="-1">
-        <section>
-          <h2>Designed for the future</h2>
+      <main class="main" id="main-content" tabindex="-1">
+        <section class="future">
+          <h2 class="future__title">Designed for the future</h2>
 
-          <div>
-            <picture>
+          <div class="future__content">
+            <picture class="future__img-container">
               <source media="(width > 75em)" srcset="/src/assets/images/illustration-editor-desktop.svg">
-              <img src="/src/assets/images/illustration-editor-mobile.svg" 
-                    alt="" width="376" height="307" loading="lazy" decoding="async">
+              <img class="future__img" src="/src/assets/images/illustration-editor-mobile.svg" 
+                    alt="" width="343" height="280" loading="lazy" decoding="async">
             </picture>
 
-            <div>
-              <section>
-                <h3>Introducing an extensible editor</h3>
-                <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+            <div class="future__text">
+              <section class="future__feature">
+                <h3 class="future__feature-title">Introducing an extensible editor</h3>
+                <p class="future__feature-desc">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
                   The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
                   videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
                   change the looks of a blog.
                 </p>
               </section>
 
-              <section>
-                <h3>Robust content management</h3>
-                <p>Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+              <section class="future__feature">
+                <h3 class="future__feature-title">Robust content management</h3>
+                <p class="future__feature-desc future__feature-desc--shorter">Flexible content management enables users to easily move through posts. Increase the usability of your blog 
                   by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
                 </p>
               </section>
@@ -146,38 +146,42 @@
           </div>
         </section>
 
-        <section aria-labelledby="state">
-          <img src="/src/assets/images/illustration-phones.svg" 
-                alt="" width="328" height="347" loading="lazy" decoding="async">
-
-          <div>
-            <h2 id="state">State of the Art Infrastructure</h2>
-            <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+        <section class="infrastructure" aria-labelledby="state">
+          <div class="infrastructure__img-container">
+            <img class="infrastructure__img" src="/src/assets/images/illustration-phones.svg" 
+                  alt="" width="328" height="347" loading="lazy" decoding="async">
+          </div>
+          
+          <div class="infrastructure__content">
+            <h2 class="infrastructure__title" id="state">State of the Art Infrastructure</h2>
+            <p class="infrastructure__desc">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
               This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
             </p>
           </div>
         </section>
 
-        <section>
-          <picture>
+        <section class="tools" aria-label="Blogr Features">
+          <picture class="tools__img-container">
             <source media="(width > 75em)" srcset="/src/assets/images/illustration-laptop-desktop.svg">
-            <img src="/src/assets/images/illustration-laptop-mobile.svg" 
+            <img class="tools__img" src="/src/assets/images/illustration-laptop-mobile.svg" 
                   alt="" width="347" height="250" loading="lazy" decoding="async">
           </picture>
 
-          <div>
-            <h3>Free, open, simple</h3>
-            <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-            </p>
-          </div>
+          <div class="tools__content-wrapper">
+            <section class="tools__content">
+              <h3 class="tools__title">Free, open, simple</h3>
+              <p class="tools__desc">Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+              </p>
+            </section>
 
-          <div>
-            <h3>Powerful tooling</h3>
-            <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-              capable of producing even the most complicated sites.
-            </p>
+            <section class="tools__content">
+              <h3 class="tools__title">Powerful tooling</h3>
+              <p class="tools__desc">Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </section>
           </div>
         </section>
       </main>
