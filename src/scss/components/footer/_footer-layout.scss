@@ -1,1 +1,32 @@
 @use '@scss/global/functions' as *;
+
+.footer {
+    display: grid;
+    place-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 72px;
+    }
+
+    &__nav {
+        display: grid;
+        row-gap: 40px;
+        grid-template-areas:
+        "pro"
+        "comp"
+        "con";
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 21px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+}

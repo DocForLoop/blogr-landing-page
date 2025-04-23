@@ -167,11 +167,28 @@
     }
     
     &__dropdown-link {
+        position: relative;
         color: var(--clr-headings-active);
         transition: color 0.3s;
         
         &:hover, &:focus-visible {
             color: var(--clr-headings);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset-block-end: rem(-2);
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            inline-size: 0;
+            block-size: rem(2);
+            background-color: var(--clr-headings-active);
+            transition: inline-size 0.3s ease;
+        }
+    
+        &:hover::after {
+            inline-size: 100%;
         }
     }
     

@@ -1,2 +1,68 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+.footer {
+    color: var(--clr-light);
+    background-color: var(--clr-footer-bg);
+    padding-block: 75px;
+    padding-inline: fluid(24, 165, 375, 1440);
+    border-start-end-radius: rem(100);
+    text-align: center;
+
+    &__logo-link {
+
+        &:focus-visible {
+            outline: rem(3) solid var(--clr-light);
+            outline-offset: rem(3);
+        }
+    }
+
+    &__logo {
+        inline-size: rem(100);
+        block-size: rem(40);
+    }
+
+    &__section--product {
+        grid-area: pro;
+    }
+
+    &__section--company {
+        grid-area: comp;
+
+    }
+
+    &__section--connect {
+        grid-area: con;
+
+    }
+
+    &__heading {
+        font-size: var(--fs-body-secondary);
+    }
+
+    &__link {
+        color: var(--clr-footer);
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset-block-end: rem(-2);
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            inline-size: 0;
+            block-size: rem(2);
+            background-color: var(--clr-footer);
+            transition: inline-size 0.3s ease;
+        }
+    
+        &:hover::after {
+            inline-size: 100%;
+        }
+
+        &:focus-visible {
+            outline: rem(3) solid var(--clr-light);
+            outline-offset: rem(3);
+        }
+    }
+}
