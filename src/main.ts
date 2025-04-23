@@ -88,5 +88,29 @@ const closeMenusWithEsc = (event:KeyboardEvent): void => {
     }
 };
 
+const closeMenusOnOutsideClick = (event:MouseEvent): void => {
+    const target = event.target as Node;
+
+    const isClickInsideDropdown = Array.from(dropdownButtons).some((button, index) => {
+        return button.contains(target) || dropdownMenus[index].contains(target);
+    });
+
+    const isClickInsideMenu = navMenu.contains(target);
+    const isClickOnMenuButton = menuButton.contains(target);
+
+    if (!isClickInsideDropdown && isClickInsideMenu && !isClickOnMenuButton) {
+        closeAllDropdowns();
+    }
+
+    if (
+        navMenu.classList.contains('header__nav--active') &&
+        !navMenu.contains(target) &&
+        !menuButton.contains(target)
+    ) {
+        toggleMenu();
+    }
+}
+
 menuButton.addEventListener('click', toggleMenu);
 document.addEventListener('keydown', closeMenusWithEsc);
+document.addEventListener('click', closeMenusOnOutsideClick);
