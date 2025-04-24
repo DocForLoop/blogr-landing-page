@@ -1,2 +1,137 @@
 @use '@scss/global/functions' as *;
 @use '@scss/global/mixins' as m;
+
+@media (width > em(768)) {
+    
+    .header {
+        background-image: url('/src/assets/images/bg-pattern-intro-desktop.svg'),
+                        var(--clr-header-grad-desktop);
+        background-position: -200px -900px, top;
+        background-size: 2245px 2245px;
+        padding-inline: fluid(48, 164, 768, 1440);
+
+        &__menu-toggle {
+            display: none;
+        }
+
+        &__wrapper {
+            column-gap: fluid(45, 64, 768, 1440);
+        }
+
+        &__nav {
+            position: static;
+            inset-block-start: unset;
+            inset-inline: unset;
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0;
+            box-shadow: unset;
+            font-weight: var(--fw-4);
+            opacity: 1;
+            transform: unset;
+            pointer-events: unset;
+            visibility: visible;
+            transition: unset;
+        }
+
+        &__nav-list {
+            flex-direction: row;
+            align-items: baseline;
+            column-gap: fluid(20, 32, 768, 1440);
+        }
+
+        &__dropdown-toggle {
+            color: var(--clr-light-active);
+            font-family: var(--ff-secondary);
+            font-size: var(--fs-body-primary);
+            font-weight: var(--fw-5);
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--clr-light);
+            }
+        }
+
+        &__dropdown-toggle-name {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset-block-end: rem(-2);
+                inset-inline-start: 50%;
+                transform: translateX(-50%);
+                inline-size: 0;
+                block-size: rem(2);
+                background-color: var(--clr-light);
+                transition: inline-size 0.3s ease;
+            }
+        
+            &:hover::after {
+                inline-size: 100%;
+            }
+        }
+
+// Helper class for dropdown-btn
+        &__dropdown-toggle--active{
+            color: var(--clr-light);
+        }
+
+        &__dropdown-icon {
+            stroke: var(--clr-light);
+        }
+
+        &__dropdown-menu{
+            position: absolute;
+            inset-block-start: 27px;
+            inset-inline-start: -24px;
+            align-items: flex-start;
+            transform: translateY(15px);
+            padding-inline-start: 24px;
+            padding-inline-end: 51px;
+            padding-block: 24px;
+            background-color: var(--clr-light);
+            box-shadow: 0 rem(20) rem(40) 0 var(--clr-dropdown-shadow);
+        }
+
+        &__dropdown-link {
+            font-family: var(--ff-secondary);
+        }
+
+        &__nav-item {
+            position: relative;
+        }
+
+        &__nav-item--login {
+            padding: 0;
+            margin-inline-start: fluid(34, 348, 768, 1440);
+            border: none;
+        }
+
+        &__nav-link--login {
+            color: var(--clr-light-active);
+            font-size: var(--fs-body-primary);
+            font-weight: var(--fw-5);
+            font-family: var(--ff-secondary);
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--clr-light);
+            }
+        }
+
+        &__nav-link--cta {
+            @include m.btn-light;
+            padding-block: 10px;
+        }
+    }
+}
+
+
+@media (width > em(1440)) {
+    .header {
+        &__nav-item--login {
+            margin-inline-start: fluid(348, 560, 1440, 1650);
+        }
+    }
+}

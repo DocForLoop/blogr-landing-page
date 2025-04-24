@@ -3,10 +3,27 @@ import './scss/style.scss';
 const dropdownButtons = document.querySelectorAll('.header__dropdown-toggle') as NodeListOf<HTMLButtonElement>;
 const dropdownMenus =  document.querySelectorAll('.header__dropdown-menu') as NodeListOf<HTMLUListElement>;
 const dropdownIcons = document.querySelectorAll('.header__dropdown-icon') as NodeListOf<SVGSVGElement>;
+const isDesktop = () => window.matchMedia("(min-width: 768px)").matches;
+
+const closeDropdown = (index: number): void => {
+    dropdownButtons[index].setAttribute('aria-expanded', 'false');
+    dropdownMenus[index].setAttribute('aria-hidden', 'true');
+    dropdownButtons[index].classList.remove('header__dropdown-toggle--active');
+    dropdownIcons[index].classList.remove('header__dropdown-icon--active');
+    dropdownMenus[index].classList.remove('header__dropdown-menu--active');
+};
 
 dropdownButtons.forEach((dropdownButton, index) => {
     const toggleDropdown = (): void => {
         const isActive = dropdownButton.getAttribute('aria-expanded') === 'true';
+
+        if (!isActive) {
+            dropdownButtons.forEach((_, i) => {
+                if (i !== index) {
+                    closeDropdown(i);
+                }
+            });
+        }
 
         dropdownButton.setAttribute('aria-expanded', String(!isActive));
         dropdownMenus[index].setAttribute('aria-hidden', String(isActive));
@@ -20,14 +37,16 @@ dropdownButtons.forEach((dropdownButton, index) => {
 });
 
 const closeAllDropdowns = (): void => {
-    dropdownButtons.forEach((button, index) => {
-      button.setAttribute('aria-expanded', 'false');
-      dropdownMenus[index].setAttribute('aria-hidden', 'true');
-  
-      button.classList.remove('header__dropdown-toggle--active');
-      dropdownIcons[index].classList.remove('header__dropdown-icon--active');
-      dropdownMenus[index].classList.remove('header__dropdown-menu--active');
+
+    dropdownButtons.forEach((_, i) => {
+        closeDropdown(i);
     });
+};
+
+const closeAllDropdownsOnResize = (): void => {
+    if (isDesktop()) {
+        closeAllDropdowns();
+    }
 };
 
 const menuButton = document.querySelector('.header__menu-toggle') as HTMLButtonElement;
@@ -42,7 +61,7 @@ const getFocusableElements = () => {
 const focusableElements = getFocusableElements();
 
 const trapFocus = (event:KeyboardEvent): void => {
-
+    
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
 
@@ -51,7 +70,7 @@ const trapFocus = (event:KeyboardEvent): void => {
             event.preventDefault();
             lastElement.focus();
             
-        } else if (document.activeElement === lastElement) {
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
                 event.preventDefault();
                 firstElement.focus();   
         }
@@ -102,6 +121,10 @@ const closeMenusOnOutsideClick = (event:MouseEvent): void => {
         closeAllDropdowns();
     }
 
+    if (isDesktop() && !isClickInsideDropdown) {
+        closeAllDropdowns();
+    }
+
     if (
         navMenu.classList.contains('header__nav--active') &&
         !navMenu.contains(target) &&
@@ -109,8 +132,36 @@ const closeMenusOnOutsideClick = (event:MouseEvent): void => {
     ) {
         toggleMenu();
     }
-}
+};
+
+const handleDropdownFocus = (event: FocusEvent) => {
+
+    const target = event.target as Node;
+
+    let foundActive = false;
+
+    dropdownButtons.forEach((button, index) => {
+        const menu = dropdownMenus[index];
+        const isCurrent = button.contains(target) || menu.contains(target);
+
+        if (isCurrent) {
+            foundActive = true;
+
+            dropdownButtons.forEach((_, i) => {
+                if (i !== index) {
+                    closeDropdown(i);
+                }
+            });
+        }
+    });
+
+    if (!foundActive) {
+        closeAllDropdowns();
+    }
+};
 
 menuButton.addEventListener('click', toggleMenu);
 document.addEventListener('keydown', closeMenusWithEsc);
 document.addEventListener('click', closeMenusOnOutsideClick);
+document.addEventListener('focusin', handleDropdownFocus);
+window.addEventListener('resize', closeAllDropdownsOnResize);

@@ -15,7 +15,7 @@
                         var(--clr-header-grad-mobile);
     background-repeat: no-repeat, no-repeat;
     background-position: -340px -235px, top;
-    padding-inline: fluid(24, 164, 375, 1440);
+    padding-inline: fluid(24, 48, 375, 768);
     padding-block-start: fluid(56, 60, 375, 1440);
     padding-block-end: 155px;
     border-end-start-radius: 100px;
@@ -48,6 +48,10 @@
 
     &__wrapper {
         position: relative;
+    }
+
+    &__logo-link {
+        flex-shrink: 0;
     }
     
     &__logo {
@@ -127,8 +131,10 @@
     }
     
     &__dropdown-icon {
+        flex-shrink: 0;
         inline-size: rem(10);
         block-size: rem(7);
+        stroke: var(--clr-svg-stroke);
         transition: transform 0.3s ease;
     }
 
@@ -203,7 +209,7 @@
 
     &__nav-link--cta {
         @include m.btn-grad;
-        padding-inline: 40px;
+        padding-inline: 39px;
         white-space: nowrap;
     }
 }
