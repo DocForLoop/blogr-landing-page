@@ -41,7 +41,7 @@
     font-weight: var(--fw-5);
     transition: opacity 0.3s, color 0.3s;
 
-    &:hover, &:focus-visible {
+    &:hover {
         opacity: 75%;
         color: var(--clr-cta-text);
     }

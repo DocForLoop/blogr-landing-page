@@ -44,8 +44,10 @@ const closeAllDropdowns = (): void => {
 };
 
 const closeAllDropdownsOnResize = (): void => {
-    if (isDesktop()) {
-        closeAllDropdowns();
+    closeAllDropdowns();
+
+    if (menuButton.getAttribute('aria-expanded') === 'true') {
+        toggleMenu();
     }
 };
 

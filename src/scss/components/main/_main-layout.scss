@@ -7,7 +7,7 @@
 .future {
     display: flex;
     flex-direction: column;
-    row-gap: 48px;
+    row-gap: fluid(38, 93, 375, 1440);
 
     &__content {
         display: flex;

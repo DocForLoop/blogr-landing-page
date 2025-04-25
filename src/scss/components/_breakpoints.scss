@@ -127,11 +127,124 @@
     }
 }
 
+@media (width > em(1200)) {
+
+    .page-wrapper {
+        row-gap: 70px;
+    }
+
+    .future {
+        padding-inline-start: fluid(48, 165, 1200, 1440);
+        padding-inline-end: fluid(48, 150, 1200, 1650);
+        padding-block-start: 79px;
+
+        &__title {
+            align-self: center;
+        }
+
+        &__content {
+            position: relative;
+            text-align: start;
+            flex-direction: row;
+            align-items: center;
+            column-gap: fluid(25, 125, 1200, 1440);
+        }
+
+        &__img {
+            inline-size: rem(925);
+            block-size: auto;
+            max-inline-size: unset;
+        }
+
+        &__img-container {
+            position: absolute;
+            inset-inline-start: fluid(500, 780, 1200, 1650);
+            inset-block-start: -240px;
+        }
+
+        &__text {
+            padding-inline: 0;
+            padding-inline-start: fluid(0, 80, 1440, 1650);
+        }
+
+        &__feature {
+            align-items: flex-start;
+            
+        }
+    }
+
+    .infrastructure {
+        flex-direction: row;
+        column-gap: fluid(0, 98, 1200, 1440);
+        margin-block-start: 262px;
+        padding-inline-start: fluid(48, 165, 1200, 1440);
+        padding-block: 111px;
+        background-position: -240px -550px, center;
+        background-size: 1014px 1018px, cover;
+
+        &__img-container {
+            position: relative;
+            max-inline-size: rem(520);
+            margin: 0;
+        }
+        
+        &__img {
+            inset-block-start: -170px;
+        }
+        
+        &__content {
+            row-gap: 5px;
+            text-align: start;
+            padding-inline: 0;
+        }
+    }
+
+    .tools {
+        position: relative;
+        flex-direction: row-reverse;
+        text-align: start;
+        align-items: center;
+        margin-block-start: 301px;
+        margin-block-end: 208px;
+        margin-inline-end: fluid(0, 165, 1200, 1440);
+
+        &__img-container {
+            position: absolute;
+            inset-inline-start: -269px;
+        }
+
+        &__img {
+            inline-size: rem(930);
+            block-size: auto;
+            max-inline-size: unset;
+        }
+
+        &__desc {
+            padding-inline: 0;
+            max-inline-size: 57ch;
+        }
+
+        &__content-wrapper {
+            row-gap: 64px;
+        }
+
+        &__content {
+            align-items: flex-start;
+            row-gap: 16px;
+        }
+    }
+}
+
 
 @media (width > em(1440)) {
+
     .header {
         &__nav-item--login {
             margin-inline-start: fluid(348, 560, 1440, 1650);
         }
+    }
+
+    .tools {
+        margin-inline-end: fluid(165, 270, 1440, 1650);
     }
 }
