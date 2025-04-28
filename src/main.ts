@@ -88,6 +88,7 @@ const toggleMenu = ():void => {
     menuIcon.setAttribute('src', isExpanded ? './src/assets/images/icon-hamburger.svg' : './src/assets/images/icon-close.svg');
     menuIcon.classList.toggle('header__menu-icon--active');
     navMenu.classList.toggle('header__nav--active');
+    navMenu.setAttribute('aria-hidden', String(isExpanded));
 
     if(isExpanded) {
         closeAllDropdowns();
@@ -118,19 +119,19 @@ const closeMenusOnOutsideClick = (event:MouseEvent): void => {
 
     const isClickInsideMenu = navMenu.contains(target);
     const isClickOnMenuButton = menuButton.contains(target);
+    const menuIsOpen = navMenu.classList.contains('header__nav--active')
 
-    if (!isClickInsideDropdown && isClickInsideMenu && !isClickOnMenuButton) {
-        closeAllDropdowns();
-    }
-
-    if (isDesktop() && !isClickInsideDropdown) {
+    if (
+        (!isClickInsideDropdown && isClickInsideMenu && !isClickOnMenuButton) || 
+        (isDesktop() && !isClickInsideDropdown)
+    ) {
         closeAllDropdowns();
     }
 
     if (
-        navMenu.classList.contains('header__nav--active') &&
-        !navMenu.contains(target) &&
-        !menuButton.contains(target)
+        menuIsOpen &&
+        !isClickInsideMenu &&
+        !isClickOnMenuButton
     ) {
         toggleMenu();
     }
@@ -162,8 +163,19 @@ const handleDropdownFocus = (event: FocusEvent) => {
     }
 };
 
+const setAriaHiddenForMobile = (): void => {
+    
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        navMenu.setAttribute('aria-hidden', 'true');
+    } else {
+        navMenu.setAttribute('aria-hidden', 'false');
+    }
+};
+
 menuButton.addEventListener('click', toggleMenu);
 document.addEventListener('keydown', closeMenusWithEsc);
 document.addEventListener('click', closeMenusOnOutsideClick);
 document.addEventListener('focusin', handleDropdownFocus);
 window.addEventListener('resize', closeAllDropdownsOnResize);
+document.addEventListener('DOMContentLoaded', setAriaHiddenForMobile);
+window.addEventListener('resize', setAriaHiddenForMobile);

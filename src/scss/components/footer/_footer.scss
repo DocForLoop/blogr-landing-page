@@ -10,6 +10,7 @@
     text-align: center;
 
     &__logo-link {
+        align-self: start;
 
         &:focus-visible {
             outline: rem(3) solid var(--clr-light);

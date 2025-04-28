@@ -61,7 +61,7 @@
     }
 
     &__menu-toggle {
-        margin-left: auto;
+        margin-inline-start: auto;
         border: none;
         background: none;
         border-radius: rem(5);
@@ -144,7 +144,7 @@
     }
     
     &__dropdown-menu{
-        max-height: 0;
+        max-block-size: 0;
         opacity: 0;
         padding-block: 0;
         overflow: clip;
@@ -152,7 +152,7 @@
         transform: translateY(-10px);
         pointer-events: none;
         transition: 
-            max-height 0.3s, 
+            max-block-size 0.3s, 
             opacity 0.3s,
             padding-block 0.3s,
             transform 0.3s;
@@ -162,7 +162,7 @@
 
 // Helper class for dropdown-menu
     &__dropdown-menu--active {
-        max-height: 300px;
+        max-block-size: 300px;
         opacity: 1;
         padding-block: 20px;
         visibility: visible;
@@ -229,6 +229,7 @@
     &__actions {
         line-height: normal;
     }
+    
     &__btn--light {
         flex-shrink: 0;
         @include m.btn-light;

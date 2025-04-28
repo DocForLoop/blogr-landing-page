@@ -142,16 +142,21 @@
 @media (width > em(1200)) {
 
     .page-wrapper {
-        row-gap: 70px;
+        row-gap: 113px;
         overflow: clip;
+    }
+
+    .hero {
+        &__title {
+            letter-spacing: rem(-1.92);
+        }
     }
 
     .future {
         padding-inline-start: fluid(48, 165, 1200, 1440);
         padding-inline-end: fluid(48, 150, 1200, 1650);
-        padding-block-start: 79px;
+        padding-block-start: 99px;
         
-
         &__title {
             align-self: center;
         }
@@ -190,7 +195,7 @@
     .infrastructure {
         flex-direction: row;
         column-gap: fluid(0, 98, 1200, 1440);
-        margin-block-start: 262px;
+        margin-block-start: 275px;
         padding-inline-start: fluid(48, 165, 1200, 1440);
         padding-block: 111px;
         background-position: -240px -550px, center;
