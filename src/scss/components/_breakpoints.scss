@@ -125,18 +125,32 @@
             padding-block: 10px;
         }
     }
+
+    .footer {
+        padding-block: 70px;
+        text-align: start;
+
+        &__nav {
+            column-gap: fluid(100, 165, 768, 1200);
+            grid-template-areas:
+            "pro comp"
+            "con con";
+        }
+    }
 }
 
 @media (width > em(1200)) {
 
     .page-wrapper {
         row-gap: 70px;
+        overflow: clip;
     }
 
     .future {
         padding-inline-start: fluid(48, 165, 1200, 1440);
         padding-inline-end: fluid(48, 150, 1200, 1650);
         padding-block-start: 79px;
+        
 
         &__title {
             align-self: center;
@@ -151,7 +165,7 @@
         }
 
         &__img {
-            inline-size: rem(925);
+            inline-size: rem(900);
             block-size: auto;
             max-inline-size: unset;
         }
@@ -206,7 +220,7 @@
         align-items: center;
         margin-block-start: 301px;
         margin-block-end: 208px;
-        margin-inline-end: fluid(0, 165, 1200, 1440);
+        margin-inline-end: fluid(100, 205, 1200, 1440);
 
         &__img-container {
             position: absolute;
@@ -221,7 +235,7 @@
 
         &__desc {
             padding-inline: 0;
-            max-inline-size: 57ch;
+            max-inline-size: 45ch;
         }
 
         &__content-wrapper {
@@ -231,6 +245,21 @@
         &__content {
             align-items: flex-start;
             row-gap: 16px;
+        }
+    }
+
+    .footer {
+        place-items: unset;
+
+        &__nav {
+            column-gap: fluid(100, 230, 1200, 1440);
+            grid-template-areas:
+            "pro comp con";
+        }
+
+        &__content {
+            flex-direction: row;
+            column-gap: fluid(132, 184, 1200, 1440);
         }
     }
 }
@@ -245,6 +274,18 @@
     }
 
     .tools {
-        margin-inline-end: fluid(165, 270, 1440, 1650);
+        margin-inline-end: fluid(205, 380, 1440, 1650);
+    }
+
+    .footer {
+
+        &__nav {
+            grid-template-areas:
+            "pro comp con";
+        }
+
+        &__content {
+            column-gap: fluid(184, 280, 1440, 1650);
+        }
     }
 }
