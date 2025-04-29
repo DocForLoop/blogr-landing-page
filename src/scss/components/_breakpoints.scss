@@ -45,7 +45,7 @@
             font-family: var(--ff-secondary);
             font-size: var(--fs-body-primary);
             font-weight: var(--fw-5);
-            transition: color 0.3s;
+            /* transition: color 0.3s; */
 
             &:hover {
                 color: var(--clr-light);
@@ -113,7 +113,7 @@
             font-size: var(--fs-body-primary);
             font-weight: var(--fw-5);
             font-family: var(--ff-secondary);
-            transition: color 0.3s ease;
+            /* transition: color 0.3s ease; */
 
             &:hover {
                 color: var(--clr-light);
@@ -219,7 +219,7 @@
         align-items: center;
         margin-block-start: 301px;
         margin-block-end: 208px;
-        margin-inline-end: fluid(100, 205, 1200, 1440);
+        margin-inline-end: fluid(100, 225, 1200, 1440);
 
         &__img-container {
             position: absolute;
@@ -281,7 +281,7 @@
     }
 
     .tools {
-        margin-inline-end: fluid(205, 380, 1440, 1650);
+        margin-inline-end: fluid(225, 380, 1440, 1650);
     }
 
     .footer {

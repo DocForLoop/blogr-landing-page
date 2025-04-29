@@ -7,7 +7,7 @@
     border-radius: rem(28);
     font-family: var(--ff-secondary);
     font-weight: var(--fw-5);
-    transition: color 0.3s ease, background-color 0.3s ease;
+    /* transition: color 0.3s ease, background-color 0.3s ease; */
 
     &:hover {
         color: var(--clr-light);
@@ -39,10 +39,10 @@
     background: var(--clr-btn-sign-up);
     font-family: var(--ff-secondary);
     font-weight: var(--fw-5);
-    transition: opacity 0.3s, color 0.3s;
+    /* transition: opacity 0.3s, color 0.3s; */
 
     &:hover {
         opacity: 75%;
-        color: var(--clr-cta-text);
+        /* color: var(--clr-cta-text); */
     }
 }
