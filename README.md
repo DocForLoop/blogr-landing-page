@@ -20,8 +20,8 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/)
-- [Live Site](https://)
+- [Solution](https://www.frontendmentor.io/solutions/blogr-landing-page-with-flexbox-and-grid-mSB_rds30e)
+- [Live Site](https://blogr-landing-page-tau-lime.vercel.app/)
 
 ## My process
 
