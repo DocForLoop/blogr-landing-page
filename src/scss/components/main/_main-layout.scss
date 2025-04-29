@@ -37,8 +37,8 @@
 
 .infrastructure {
     display: flex;
-    flex-direction: column;
-    row-gap: fluid(47, 114, 375, 1200);
+    align-items: center;
+    justify-content: center;
 
     &__content {
         display: flex;

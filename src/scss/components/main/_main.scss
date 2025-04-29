@@ -42,23 +42,15 @@
     background-size: fluid(602, 950, 375, 1200) fluid(602, 950, 375, 1200), cover;
     border-end-start-radius: rem(100);
     border-start-end-radius: rem(100);
-    padding-block-start: 125px;
+    padding-block-start: fluid(201, 340, 375, 1200);
     padding-block-end: 109px;
-    
-    
-    &__img-container {
-        position: relative;
-        max-inline-size: rem(450);
-        aspect-ratio: 8/1;
-        margin-inline-start: fluid(0, 380, 423, 1200);
-    }
+    position: relative;
 
     &__img {
         position: absolute;
-        inset-block-start: -310px;
-        inset-inline: 0;
-        inline-size: 100%;
-        block-size: auto;
+        inset-block-start: -160px;
+        inline-size: fluid(328, 505, 375, 1200);
+        block-size: fluid(347, 530, 375, 1200);
     }
     
     &__content {
@@ -71,6 +63,7 @@
         color: var(--clr-light);
         font-size: var(--fs-h2-secondary);
         letter-spacing: var(--ls-h2-desk);
+        line-height: 1.5;
     }
 
     &__desc {

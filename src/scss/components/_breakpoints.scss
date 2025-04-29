@@ -193,22 +193,16 @@
     }
 
     .infrastructure {
-        flex-direction: row;
-        column-gap: fluid(0, 98, 1200, 1440);
         margin-block-start: 275px;
-        padding-inline-start: fluid(48, 165, 1200, 1440);
+        padding-inline-start: fluid(600, 735, 1200, 1440);
+        padding-inline-end: fluid(48, 165, 1200, 1440);
         padding-block: 111px;
         background-position: -240px -550px, center;
         background-size: 1014px 1018px, cover;
-
-        &__img-container {
-            position: relative;
-            max-inline-size: rem(520);
-            margin: 0;
-        }
         
         &__img {
-            inset-block-start: -170px;
+            inset-block-start: -40px;
+            inset-inline-start: fluid(60, 140, 1200, 1440);
         }
         
         &__content {
