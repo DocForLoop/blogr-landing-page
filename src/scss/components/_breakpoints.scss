@@ -266,6 +266,14 @@
             flex-direction: row;
             column-gap: fluid(132, 184, 1200, 1440);
         }
+
+        &__heading {
+            font-size: var(--fs-links);
+        }
+
+        &__link {
+            font-size: var(--fs-links);
+        }
     }
 }
 
