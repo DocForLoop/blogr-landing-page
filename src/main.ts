@@ -1,4 +1,6 @@
 import './scss/style.scss';
+import hamburgerIcon from './assets/images/icon-hamburger.svg';
+import closeIcon from './assets/images/icon-close.svg';
 
 const dropdownButtons = document.querySelectorAll('.header__dropdown-toggle') as NodeListOf<HTMLButtonElement>;
 const dropdownMenus =  document.querySelectorAll('.header__dropdown-menu') as NodeListOf<HTMLUListElement>;
@@ -85,7 +87,7 @@ const toggleMenu = ():void => {
     menuButton.setAttribute('aria-expanded', String(!isExpanded));
     menuButton.setAttribute('aria-label', isExpanded ? 'Open menu' : 'Close menu');
 
-    menuIcon.setAttribute('src', isExpanded ? '/src/assets/images/icon-hamburger.svg' : '/src/assets/images/icon-close.svg');
+    menuIcon.setAttribute('src', isExpanded ? hamburgerIcon : closeIcon);
     menuIcon.classList.toggle('header__menu-icon--active');
     navMenu.classList.toggle('header__nav--active');
     navMenu.setAttribute('aria-hidden', String(isExpanded));
