@@ -45,7 +45,7 @@
             font-family: var(--ff-secondary);
             font-size: var(--fs-body-primary);
             font-weight: var(--fw-5);
-            /* transition: color 0.3s; */
+            transition: color 0.3s;
 
             &:hover {
                 color: var(--clr-light);
@@ -113,7 +113,7 @@
             font-size: var(--fs-body-primary);
             font-weight: var(--fw-5);
             font-family: var(--ff-secondary);
-            /* transition: color 0.3s ease; */
+            transition: color 0.3s ease;
 
             &:hover {
                 color: var(--clr-light);
