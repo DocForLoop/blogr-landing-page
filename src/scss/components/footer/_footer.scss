@@ -64,4 +64,30 @@
             outline-offset: rem(3);
         }
     }
+
+    &__attribution {
+        position: absolute;
+        inset-block-end: 5px;
+        inset-inline: 0;
+        font-size: rem(12);
+        text-align: center;
+        color: var(--clr-light);
+    }
+
+    &__attribution-link {
+        color: var(--clr-light);
+        border-radius: rem(3);
+        text-decoration: underline;
+        transition: color 0.3s;
+
+        &:hover,
+        &:focus-visible {
+            color: var(--clr-svg-stroke);
+        }
+
+        &:focus-visible {
+            outline: rem(3) solid var(--clr-light);
+            outline-offset: rem(2);
+        }
+    }
 }
